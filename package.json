@@ -1,0 +1,23 @@
+{
+  "name": "lab4-basic-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run init_tables && jest --forceExit",
+    "init_tables": "node src/configs/initTables.js",
+    "create": "node examples/crud/create.js",
+    "read": "node examples/crud/read.js",
+    "update": "node examples/crud/update.js",
+    "delete": "node examples/crud/delete.js",
+    "start": "npm run init_tables && npm run read && npm run create && npm run read && npm run update && npm run read && npm run delete & npm run read",
+    "test1": "jest -t 'selectAll should call pool.query with the correct arguments' --forceExit",
+    "test2": "jest -t 'selectById should call pool.query with the correct arguments' --forceExit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0",
+    "mysql2": "^3.9.2"
+  }
+}
